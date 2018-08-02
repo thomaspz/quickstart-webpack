@@ -7,7 +7,8 @@
     "build": "webpack --config webpack.prod.js",
     "start": "webpack-dev-server --config webpack.dev.js",
     "clean": "del-cli dist/bundle.js dist/bundle.js.map",
-    "lint": "eslint ./src --ext .js,.jsx"
+    "lint": "eslint ./src --ext .js,.jsx",
+    "delete-demo": "del-cli src/demo.js src/demo.png src/demo.scss src/index.js && touch src/index.js && sed -e '/delete-demo/d' package.json"
   },
   "author": "",
   "license": "MIT",
